@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db: 
+    image: mysql
+    environment:
+    - MYSQL_ROOT_PASSWORD=petclinic
+    - MYSQL_DATABASE=petclinic
+  petclinic:
+    image: anthonydahanne/spring-petclinic
+    ports:
+    - "8080:8080"
+    depends_on:
+    - db

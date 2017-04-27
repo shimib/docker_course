@@ -1,0 +1,19 @@
+# run container in backgroud
+docker run -d imagename
+# run container in the foreground
+docker run -it imagename
+
+# run container and expose ports
+docker run -p 9090:8080 -d image_name
+
+# connect to a running container
+docer exec -it container_id /bin/bash
+
+# destory all containers
+docker rm -f `docker ps -a -q`
+
+# list all containers
+docker ps -a
+
+# get logs
+docker logs container_id
